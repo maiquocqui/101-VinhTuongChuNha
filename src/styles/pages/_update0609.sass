@@ -1,0 +1,969 @@
+$yellow: #ffd701
+$yellowbg: #f5f4ef
+.col-4
+	width: 33.33%
+	float: left
+.col-6
+	width: 50%
+	float: left
+.col-12
+	width: 100%
+	float: left
+
+.container
+	+pos(static,unset)
+	+media-breakpoint-up(xl)
+		max-width: 1170px
+		width: 100%
+		// padding: 0px 30px
+	+media-breakpoint-down(lg)
+		max-width: 100%
+		width: 100%
+	&.full-width
+		+media-breakpoint-up(xl)
+			max-width: 1920px
+			width: 100%
+			padding: 0px 60px
+
+.container-fluid
+	+media-breakpoint-up(xl)
+		max-width: 1480px
+		width: 100%
+
+.content
+	// font-family: 'Montserrat', sans-serif
+	color: $main
+	+fs(14rem)
+	line-height: 1.6
+	font-weight: 300
+	.row
+		margin: 0px -10px
+		.col-12
+			padding: 0px 10px
+	.quote
+		background: darken($white,5%)
+		+bor-rad(10px)
+		padding: 15px 20px 30px
+		margin: 15px 0
+		+pos(rel,null)
+		&:before
+			content: '\f10d'
+			display: block
+			+fs(32rem)
+			color: darken($white,60%)
+			margin-bottom: 5px
+		&:after
+			content: '\f10e'
+			display: block
+			+fs(32rem)
+			color: darken($white,60%)
+			+pos(abs, null 20px 10px null)
+		.author
+			font-weight: 700
+			&:before
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				width: 20px
+				height: 1px
+				background: darken($white,60%)
+	.img-100
+		width: 100%
+	ul, ol, p, h1, h2, h3, h4, h5, h6, img, figure
+		margin-bottom: 15px
+		line-height: inherit
+		font-weight: inherit
+		+media-breakpoint-down(xs)
+			margin-bottom: 10px
+		// &:last-child
+		// 	margin-bottom: 0
+	figure
+		margin: 0 auto 15px
+		text-align: center
+		+media-breakpoint-down(xs)
+			margin-bottom: 10px
+		img
+			margin-bottom: 5px
+		figcaption
+			// background: darken($white,5%)
+			padding: 5px 0
+			text-align: center
+			+fs(13rem)
+			font-weight: 300
+			// font-style: italic
+			// color: darken($white,60%)
+	ul 
+		padding-left: 20px
+		list-style-type: disc
+	h5
+		+fs(16rem)
+	h4
+		+fs(18rem)
+	h3
+		+fs(24rem)
+		+media-breakpoint-down(xs)
+			+fs(18rem)
+	h2
+		+fs(28rem)
+	strong 
+		font-weight: 600
+	.material-icons
+		vertical-align: middle
+.text-green
+	color: $green
+.text-orange
+	color: $orange
+.text-red
+	color: $red
+.text-yellow
+	color: $yellow
+.text-blue
+	color: $blue
+a
+	color: inherit
+
+.vt-title
+	+fs(30rem)
+	// font-weight: bold
+	line-height: 1.2
+	margin-bottom: 30px
+	+media-breakpoint-down(sm)
+		+fs(24rem)
+	&:after
+		content: ''
+		display: block
+		width: 50px
+		height: 2px
+		background: $main
+		margin-top: 10px
+	&.text-center
+		&:after
+			margin: 10px auto 0
+.vt-des
+	+fs(14rem)
+	max-width: 880px
+	margin: -20px auto 30px
+	+media-breakpoint-down(sm)
+		+fs(13rem)
+
+.vt-chunha
+	margin-top: -2.5rem
+	padding: 70px 15px
+	background: $white
+	+pos(rel,null)
+	&:before
+		content: ''
+		+pos(abs, 0 100% 0 null)
+		width: 100%
+		background: $white
+	&:after
+		content: ''
+		+pos(abs, 0 null 0 100%)
+		width: 100%
+		background: $white
+	.row
+		+flexbox
+		flex-wrap: wrap
+	+media-breakpoint-down(sm)
+		padding: 40px 0
+	.vt-img
+		text-align: center
+.vt-congtrinh
+	margin: -2.5rem 0
+	padding: 70px 15px
+	background: $yellowbg
+	+pos(rel,null)
+	&:before
+		content: ''
+		+pos(abs, 0 100% 0 null)
+		width: 100%
+		background: $yellowbg
+	&:after
+		content: ''
+		+pos(abs, 0 null 0 100%)
+		width: 100%
+		background: $yellowbg
+	.row
+		+flexbox
+		flex-wrap: wrap
+	+media-breakpoint-down(sm)
+		padding: 40px 0
+	.congtrinh-group
+		width: 50%
+		padding: 0px 30px
+		+media-breakpoint-down(md)
+			width: 100%
+		+media-breakpoint-down(sm)
+			padding: 0px
+		&:nth-child(2)
+			border-left: 1px solid darken($white,10%)
+			+media-breakpoint-down(md)
+				border-left: none
+	.congtrinh-title
+		+fs(20rem)
+		margin-bottom: 30px
+		+media-breakpoint-down(sm)
+			+fs(18rem)
+			margin-bottom: 20px
+	.congtrinh-list
+		.row
+			+media-breakpoint-down(xs)
+				margin: 0px -5px
+			.col-4
+				+media-breakpoint-down(xs)
+					padding: 0px 5px
+		.congtrinh
+			width: 110px
+			margin: 0 auto 30px
+			text-align: center
+			+media-breakpoint-down(xs)
+				// width: 100px
+				margin-bottom: 15px
+			.icon
+				width: 110px
+				height: 110px
+				background: $yellow
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				margin: 0 auto
+				+media-breakpoint-down(xs)
+					width: 90px
+					height: 90px
+			.name
+				padding: 5px 0
+				+fs(14rem)
+				text-transform: uppercase
+				+media-breakpoint-down(sm)
+					+fs(12rem)
+				a
+					color: inherit
+.vt-news
+	margin-bottom: -2.5rem
+	padding: 70px 15px
+	background: $white
+	+pos(rel,null)
+	&:before
+		content: ''
+		+pos(abs, 0 100% 0 null)
+		width: 100%
+		background: $white
+	&:after
+		content: ''
+		+pos(abs, 0 null 0 100%)
+		width: 100%
+		background: $white
+	.row
+		+flexbox
+		flex-wrap: wrap
+	+media-breakpoint-down(sm)
+		padding: 40px 0
+	.news-list
+		+media-breakpoint-down(sm)
+			.row
+				margin: 0px -5px
+				.col-6
+					padding: 0px 5px
+		.news-col
+			display: block
+			margin-bottom: 30px
+			figure
+				.news-img
+					display: block
+					img
+						width: 100%
+				figcaption
+					padding: 10px 0
+					time
+						display: block
+						+fs(14rem)
+						color: darken($white,40%)
+						+media-breakpoint-down(sm)
+							+fs(12rem)
+						&:before
+							content: '\f017'
+							font-family: 'fontawesome'
+							margin-right: 5px
+					.news-name
+						+fs(14rem)
+						font-weight: 700
+						text-transform: uppercase
+						margin-bottom: 5px
+						color: $main
+						display: -webkit-box
+						height: 0.875rem*1.5*2
+						-webkit-line-clamp: 2
+						-webkit-box-orient: vertical
+						overflow: hidden
+						text-overflow: ellipsis
+						+media-breakpoint-down(sm)
+							+fs(13rem)
+						a
+							color: inherit
+					.news-des 
+						+fs(14rem)
+						color: darken($white,40%)
+						display: -webkit-box
+						height: 0.875rem*1.5*3
+						-webkit-line-clamp: 3
+						-webkit-box-orient: vertical
+						overflow: hidden
+						text-overflow: ellipsis
+						+media-breakpoint-down(sm)
+							+fs(12rem)
+	.btn-viewall
+		display: inline-block
+		+fs(15rem)
+		text-transform: uppercase
+		padding: 0px 45px
+		line-height: 44px
+		color: $main
+		background: $yellow
+		&:after
+			content: '\e87a'
+			font-family: 'linearicons-free'
+			margin-left: 5px
+		&:hover
+			background: darken($yellow,10%)
+
+// Chu nha ct
+.congtrinh-filter
+	margin-bottom: 30px
+	.row
+		+flexbox
+		flex-wrap: wrap
+	.filter-select
+		.row
+			+media-breakpoint-down(md)
+				margin: 0px -5px
+			.col-4
+				+media-breakpoint-down(md)
+					padding: 0px 5px
+		.dropdown
+			.dropdown-toggle
+				+fs(15rem)
+				color: darken($white,60%)
+				background: $white
+				display: block
+				line-height: 20px
+				padding: 10px 30px
+				+pos(rel,null)
+				border: 1px solid darken($white,20%)
+				+media-breakpoint-down(sm)
+					padding: 10px
+					+fs(14rem)
+				&:after
+					content: '\f107'
+					width: auto
+					height: auto
+					border: none
+					+pos(abs, 10px 20px null null)
+					+media-breakpoint-down(sm)
+						right: 5px
+			.dropdown-menu
+				background: $white
+				border: 1px solid darken($white,10%)
+				width: 100%
+				+bor-rad(0)
+				padding: 10px 30px
+				+media-breakpoint-down(sm)
+					padding: 5px 10px
+				a
+					display: block
+					margin-bottom: 5px
+					padding-left: 20px
+					+pos(rel,null)
+					+fs(14rem)
+					color: $main
+					&:before
+						content: ''
+						display: block
+						width: 16px
+						height: 16px
+						border: 1px solid darken($white,15%)
+						+pos(abs, 2px null null 0)
+					&:after
+						content: '\f00c'
+						font-family: 'fontawesome'
+						display: block
+						width: 16px
+						height: 16px
+						line-height: 14px
+						text-align: center
+						color: $main
+						background: $yellow
+						border: 1px solid $yellow
+						+pos(abs, 2px null null 0)
+						opacity: 0
+						+transition(all,0.5s)
+					&:last-child
+						margin-bottom: 0
+					&:hover
+						color: $yellow
+						text-decoration: none
+					&.active
+						&:after
+							opacity: 1
+	.filter-label
+		padding-top: 10px
+		.row
+			margin: 0px -5px
+			+media-breakpoint-up(md)
+			.col-4
+				padding: 0px 5px
+			.col-custom
+				+media-breakpoint-up(md)
+					width: auto
+					flex: 0 0 auto
+		.label
+			display: block
+			+bor-rad(5px)
+			background: #e3decf
+			color: $main
+			font-weight: normal
+			+fs(14rem)
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			line-height: 16px
+			padding: 10px
+			+pos(rel,null)
+			margin-bottom: 10px
+			+media-breakpoint-up(md)
+				padding-right: 30px
+			.close
+				color: $main
+				&:before
+					content: '\e870'
+					font-family: 'linearicons-free'
+					+fs(14rem)
+					+pos(abs, 10px 10px null null)
+				&:hover
+					color: $red
+.room-group
+	margin: 0px -30px 40px
+	+media-breakpoint-down(lg)
+		margin: 0px -15px 40px
+	+media-breakpoint-down(sm)
+		margin-bottom: 0
+	.room-name
+		+fs(20rem)
+		line-height: 30px
+		padding: 10px 30px
+		color: $main
+		background: $yellow
+		text-transform: uppercase
+		margin: 0
+		+pos(rel,null)
+		z-index: 1
+		+media-breakpoint-down(lg)
+			padding: 10px 20px
+		+media-breakpoint-down(sm)
+			+fs(18rem)
+			line-height: 20px
+	.solution-group
+		background: #ebe8dd
+		padding: 30px
+		width: 50%
+		+pos(rel,null)
+		+media-breakpoint-down(lg)
+			padding: 20px
+		+media-breakpoint-down(md)
+			width: 100%
+		+media-breakpoint-down(sm)
+			padding: 15px
+		&:nth-child(even)
+			background: $white
+		.group-name-wrap
+			+pos(rel,null)
+		.group-name 
+			+fs(20rem)
+			text-transform: uppercase
+			margin-bottom: 10px
+			+media-breakpoint-down(sm)
+				+fs(18rem)
+		.btn-viewall
+			+fs(13rem)
+			color: darken($white,60%)
+			+pos(abs, 35px 30px null null)
+			+media-breakpoint-down(lg)
+				top: 25px
+			+media-breakpoint-down(sm)
+				+pos(static,null)
+				display: inline-block
+				width: 150px
+				text-align: center
+				line-height: 32px
+				border: 1px solid $main
+				+fs(14rem)
+				margin-top: 15px
+				&:hover
+					background: $yellow
+					color: $main
+					border-color: $yellow
+			&:after
+				content: '\e87a'
+				font-family: 'linearicons-free'
+				margin-left: 5px
+		.solution-list
+			margin-bottom: -20px
+			+media-breakpoint-down(sm)
+				margin-bottom: -10px
+			+media-breakpoint-down(xs)
+				margin-bottom: -6px
+			.row
+				margin: 0px -10px
+				+media-breakpoint-down(sm)
+					margin: 0px -5px
+				+media-breakpoint-down(xs)
+					margin: 0px -3px
+				.col-6
+					padding: 0px 10px
+					+media-breakpoint-down(sm)
+						padding: 0px 5px
+					+media-breakpoint-down(xs)
+						padding: 0px 3px
+.solution-item
+	background: $white
+	margin-bottom: 20px
+	height: calc(100% - 20px)
+	border: 1px solid #ebe8dd
+	+media-breakpoint-down(sm)
+		height: calc(100% - 10px)
+		margin-bottom: 10px
+	+media-breakpoint-down(xs)
+		height: calc(100% - 6px)
+		margin-bottom: 6px
+	figure
+		.solution-img
+			img
+				width: 100%
+		figcaption
+			padding: 20px
+			+media-breakpoint-down(sm)
+				padding: 10px
+			.solution-name
+				+fs(15rem)
+				font-weight: bold
+				margin-bottom: 5px
+				color: $main
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+				a
+					color: inherit
+			.solution-des
+				+fs(13rem)
+				color: darken($white,40%)
+				margin-bottom: 10px
+				+media-breakpoint-down(sm)
+					+fs(12rem)
+					color: darken($white,60%)
+			.solution-feature
+				margin-bottom: 10px
+				.row
+					margin: 0px -5px
+					+media-breakpoint-down(sm)
+						margin: 0px -2px
+					.col-4
+						padding: 0px 5px
+						+media-breakpoint-down(sm)
+							padding: 0px 2px
+				.feature
+					text-align: center
+					+fs(13rem)
+					color: darken($white,40%)
+					+media-breakpoint-down(lg)
+						+fs(11rem)
+						line-height: 1.3
+						color: darken($white,50%)
+					+media-breakpoint-down(sm)
+						+fs(10rem)
+					.icon
+						margin-bottom: 10px
+						+media-breakpoint-down(sm)
+							img
+								width: 30px
+			.solution-link
+				display: block
+				+fs(13rem)
+				margin-bottom: 10px
+				color: #cc9900
+				+media-breakpoint-down(sm)
+					+fs(12rem)
+				&:after
+					content: '\e87a'
+					font-family: 'linearicons-free'
+					margin-left: 5px
+			.solution-btn
+				.btn-choose
+					display: inline-block
+					+fs(14rem)
+					text-align: center
+					color: $main
+					background: #e3decf
+					line-height: 30px
+					padding: 0px 25px
+					+bor-rad(5px)
+					+media-breakpoint-down(lg)
+						width: 100%
+						padding: 0px
+					+media-breakpoint-down(sm)
+						+fs(12rem)
+					.fa
+						margin-left: 10px
+					&:hover
+						background: $yellow
+						color: $main
+	
+.solution-pack
+	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0
+	.row
+		+flexbox
+		flex-wrap: wrap
+	.row
+		margin: 0px -10px
+		+media-breakpoint-down(sm)
+			margin: 0px -5px
+		+media-breakpoint-down(xs)
+			margin: 0px -3px
+		.col-6
+			padding: 0px 10px
+			+media-breakpoint-down(sm)
+				padding: 0px 5px
+			+media-breakpoint-down(xs)
+				padding: 0px 3px
+	.solution-item
+		margin-bottom: 30px
+		height: calc(100% - 30px)
+		+media-breakpoint-down(sm)
+			margin-bottom: 10px
+			height: calc(100% - 10px)
+		+media-breakpoint-down(xs)
+			height: calc(100% - 6px)
+			margin-bottom: 6px
+
+// MODAL SELECT SOLUTION
+.modal, .modal-open
+	padding-right: 0 !important
+.modal-select
+	max-width: 1140px
+	+media-breakpoint-down(sm)
+		margin: 0
+	.modal-content
+		+bor-rad(0)
+		border: none
+		+pos(rel,null)
+		+media-breakpoint-down(sm)
+			min-height: 100vh
+		.modal-header
+			padding: 0
+			margin: 0
+			border: none
+			.close
+				+pos(abs, 20px 20px null null)
+				z-index: 5
+				+fs(24rem)
+				opacity: 1
+				cursor: pointer
+				+media-breakpoint-down(sm)
+					top: 10px
+					right: 10px
+				&:hover
+					color: $red
+		.modal-body
+			padding: 40px
+			+media-breakpoint-down(md)
+				padding: 30px
+			+media-breakpoint-down(sm)
+				padding: 40px 20px
+		.modal-title
+			+fs(24rem)
+			font-weight: bold
+			text-transform: uppercase
+			margin-bottom: 30px
+			+media-breakpoint-down(sm)
+				+fs(22rem)
+				line-height: 1.3
+				margin-bottom: 15px
+		.row
+			margin: 0px -25px
+			+media-breakpoint-down(md)
+				margin: 0px -10px
+			.col-12
+				padding: 0px 25px
+				+media-breakpoint-down(md)
+					padding: 0px 10px
+		.selected-solution
+			background: #f4f1e9
+			padding: 30px
+			height: calc(100% - 25px)
+			margin-bottom: 25px
+			+media-breakpoint-down(sm)
+				height: auto
+				margin-bottom: 15px
+				padding: 20px
+			.title
+				+fs(18rem)
+				text-transform: uppercase
+				margin-bottom: 15px
+				+media-breakpoint-down(sm)
+					margin-bottom: 10px
+			ul
+				li
+					margin-bottom: 5px
+					+fs(15rem)
+					color: darken($white,60%)
+					&:last-child
+						margin-bottom: 0
+					&:before
+						content: '-'
+						margin-right: 5px
+		.btn-wrap
+			+flexbox
+			flex-wrap: wrap
+			justify-content: space-between
+			+media-breakpoint-down(sm)
+				justify-content: center
+			.btn-secondary, .btn-primary
+				display: block
+				+fs(14rem)
+				line-height: 40px
+				padding: 0px 20px
+				+bor-rad(5px)
+				color: $main
+				+media-breakpoint-down(sm)
+					width: 220px
+					text-align: center
+				.fa
+					margin-left: 5px
+			.btn-secondary
+				background: #e3decf
+				+media-breakpoint-down(sm)
+					margin-bottom: 10px
+				&:hover
+					background: darken($white,20%)
+			.btn-primary
+				background: $yellow
+				&:hover
+					background: darken($yellow,5%)
+
+// SOLUTION DETAIL
+.vt-solution
+	margin: -2.5rem 0
+	padding: 70px 15px
+	background: #f5f4ef
+	+pos(rel,null)
+	&:before
+		content: ''
+		+pos(abs, 0 100% 0 null)
+		width: 100%
+		background: #f5f4ef
+	&:after
+		content: ''
+		+pos(abs, 0 null 0 100%)
+		width: 100%
+		background: #f5f4ef
+	.product-slide-wrap
+		margin-bottom: 40px
+		+media-breakpoint-down(sm)
+			margin-bottom: 15px
+		.product-slide
+			margin-bottom: 10px
+			.slick-prev, .slick-next
+				+pos(abs, 50% null null null)
+				+transform(translateY(-50%))
+				z-index: 3
+				+fs(0)
+				opacity: 0.5
+				&:before
+					content: ''
+					font-family: 'linearicons-free'
+					+fs(18rem)
+				&:hover
+					opacity: 1
+			.slick-prev
+				left: 10px
+				&:before
+					content: '\e879'
+			.slick-next
+				right: 10px
+				&:before
+					content: '\e87a'
+			.item
+				border: none
+				.img
+					display: block
+					img
+						width: 100%
+		.product-nav
+			margin: 0px -5px
+			.item
+				padding: 0px 5px
+				.img
+					img
+						width: 100%
+	.product-info
+		margin-bottom: 40px
+		+media-breakpoint-down(sm)
+			margin-bottom: 15px
+		.info-table
+			table
+				td
+					+fs(15rem)
+					padding: 20px 0
+					border-bottom: 1px solid darken($white,10%)
+					+media-breakpoint-down(sm)
+						display: block
+						width: 100%
+						padding: 0
+						border-bottom: none
+					&:first-child
+						font-weight: bold
+						width: 130px
+						+media-breakpoint-down(sm)
+							width: 100%
+				tr
+					+media-breakpoint-down(sm)
+						display: block
+						padding-bottom: 10px
+						margin-bottom: 10px
+						border-bottom: 1px solid darken($white,10%)
+					&:first-child
+						td
+							padding-top: 0
+				.product-feature
+					text-align: center
+					+fs(14rem)
+					line-height: 1.3
+					img
+						margin-bottom: 10px
+				ul
+					padding-left: 0
+					list-style-type: none
+				a
+					color: #cc9900
+					text-decoration: underline
+		.btn-wrap
+			+flexbox
+			justify-content: space-between
+			padding-top: 20px
+			+media-breakpoint-down(sm)
+				padding-top: 5px
+		.btn-primary, .btn-location, .btn-download
+			+fs(13rem)
+			text-transform: uppercase
+			width: 130px
+			text-align: center
+			text-align: center
+			color: $main
+			display: block
+			line-height: 36px
+			+bor-rad(5px)
+			+media-breakpoint-down(sm)
+				+fs(11rem)
+				width: 31%
+			.fa
+				margin-left: 5px
+		.btn-location, .btn-download
+			background: #e3decf
+			&:hover
+				background: darken($white,20%)
+		.btn-primary
+			background: $yellow
+			&:hover
+				background: darken($yellow,5%)
+
+.product-description
+	margin-bottom: 40px
+	.nav-tabs
+		margin: 0
+		padding: 0
+		border: none
+		border-bottom: 1px solid darken($white,20%)
+		.nav-item
+			margin: 0 0 -1px
+			padding: 0
+			border: none
+			+ .nav-item
+				margin-left: 0
+			.nav-link
+				margin: 0
+				padding: 0
+				border: none
+				+fs(16rem)
+				+bor-rad(0)
+				line-height: 38px
+				padding: 0px 20px
+				background: $white
+				border: 1px solid darken($white,20%)
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+					line-height: 34px
+				&.active
+					border-bottom-color: $white
+					font-weight: bold
+	.tab-content
+		background: $white
+		border: 1px solid darken($white,20%)
+		border-top: none
+		padding: 20px
+		.content
+			color: darken($white,60%)
+.other-product
+	.product-list
+		.row
+			+media-breakpoint-down(sm)
+				margin: 0px -3px
+			.col-6
+				+media-breakpoint-down(sm)
+					padding: 0px 3px
+		.product-col
+			display: block
+			.product-img
+				img
+					width: 100%
+			.product-name
+				+fs(15rem)
+				padding: 10px 0
+				color: darken($white,60%)
+				+media-breakpoint-down(sm)
+					+fs(13rem)
+
+// TOOLTIP CSS
+.tooltip
+	.arrow, .tooltip-arrow
+		border-bottom-color: $white !important
+		border-top-color: $white !important
+		opacity: 1 !important
+		&:after, &:before
+			border-bottom-color: $white !important
+			border-top-color: $white !important
+			opacity: 1 !important
+.tooltip-inner
+	background-color: $white !important
+	padding: 0 !important
+	max-width: 350px !important
+	opacity: 1 !important
+	border-radius: 0 !important
+	text-align: unset !important
+	box-shadow: 0px 3px 10px color-rgba($black,0.3) !important
+	.tooltip-content
+		padding: 20px 30px
+		.tooltip-title
+			+fs(18rem)
+			line-height: 1.3
+			font-weight: bold
+			color: darken($white,60%)
+			margin-bottom: 15px
+		.tooltip-des
+			+fs(15rem)
+			color: darken($white,60%)
+			margin-bottom: 20px
+		.tooltip-link
+			+fs(15rem)
+			text-align: right
+			display: block
+			color: $red
